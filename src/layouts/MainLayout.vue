@@ -1,11 +1,18 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated> </q-header>
-
-    <q-page-container>
+  <q-layout view="hHh lpR fFf">
+    <HeaderFloating />
+    <q-page-container class="page-container">
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
-<script setup></script>
+<script setup>
+import HeaderFloating from 'src/components/HeaderFloating.vue'
+</script>
+
+<style scoped>
+.page-container {
+  margin-top: -88px;
+}
+</style>

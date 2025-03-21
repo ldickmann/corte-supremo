@@ -4,6 +4,7 @@
       <div class="banner-overlay">
         <q-toolbar class="q-pa-none q-mb-md">
           <q-toolbar-title class="text-white text-uppercase lk-toolbar-class">
+            <p class="text-overline-toolbar">Desde 1999</p>
             <p>A Barbearia dos</p>
             <span class="highlight-text">Homens</span>
           </q-toolbar-title>
@@ -43,7 +44,6 @@
 .banner-img {
   width: 100%;
   height: 100%;
-  position: none;
 }
 
 .banner-overlay {
@@ -55,6 +55,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: transparent;
+}
+
+.text-overline-toolbar {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 200;
 }
 
 .lk-toolbar-class {

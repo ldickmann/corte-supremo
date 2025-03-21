@@ -1,9 +1,9 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md justify-center align-center">
+  <div class="justify-center align-center" :class="classContainerCard">
     <q-card class="my-card" flat bordered>
       <q-card-section horizontal>
         <q-card-section>
-          <div class="text-overline text-orange-9">Overline</div>
+          <div :class="classOverline">{{ overline }}</div>
           <div class="text-h5 q-mt-sm q-mb-xs">{{ title }}</div>
           <div class="text-caption text-grey">
             {{ lorem }}
@@ -17,16 +17,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 defineProps({
+  classContainerCard: {
+    type: String,
+    default: 'container-card',
+  },
+  classOverline: {
+    type: String,
+    default: 'text-overline text-accent',
+  },
+  overline: {
+    type: String,
+    default: 'Overline',
+  },
   title: {
     type: String,
     default: 'Title',
   },
-  Overline: {
+  lorem: {
     type: String,
-    default: 'Overline',
+    default: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
   src: {
     type: String,
@@ -37,10 +48,11 @@ defineProps({
     default: 'Imagem de um barbeiro cortando o cabelo de um cliente',
   },
 })
-
-const lorem = ref(
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-)
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.container-card {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+</style>

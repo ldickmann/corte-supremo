@@ -11,7 +11,7 @@
 import HeaderFloating from 'src/components/HeaderFloating.vue'
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .page-container {
   margin-top: -88px;
 }

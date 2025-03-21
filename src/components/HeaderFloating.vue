@@ -2,8 +2,8 @@
   <q-header elevated class="header-floating">
     <q-toolbar class="q-toolbar-class">
       <div class="logo">
-        <span class="logo-line1">CORTE</span>
-        <span class="logo-line2">SUPREMO</span>
+        <span class="logo-line1 text-uppercase">Corte</span>
+        <span class="logo-line2 text-uppercase">Supremo</span>
       </div>
       <div class="menu">
         <q-btn flat label="Home" to="/" />
@@ -29,10 +29,6 @@
 .q-toolbar-class {
   width: 1300px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
 }
 
 .logo {
